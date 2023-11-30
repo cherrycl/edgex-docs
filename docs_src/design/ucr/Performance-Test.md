@@ -42,10 +42,13 @@ If appropriate, report requirements as feature requests on corresponding EdgeX p
 Format:
 - Summary of the requirement ([repo#issue-num](URL))
 -->
-- Set amount of devices and app-services to configuration file
-- Provide profiles which amount should equal with app-service, device yaml file template and app-service profile template
-    - device yaml template should base on profile and contain autoevents
-    - Follow the configuration to generate devices yaml file and app-service profile by template
+- Prerequisite:
+    - Prepare device and app-service profile template
+    - Define amount of devices and app-services on configuration file, ex. 10 devices per profile and 10 app-services.
+- Scenario:
+    1. Setup devices or simulators on device machine 
+    2. Generate devices and app-services based on templates and configuration file and put device and profile yaml files under /res of device-service
+    3. Deploy EdgeX with core-services, device-service and app-service
 - Real-time monitoring of resource utilization during data transmission by tooling, ex. Telegraf with InfluxDB/Grafana
 
 ![Performance Test Infra](performance-test.png)
