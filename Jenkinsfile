@@ -21,7 +21,8 @@ pipeline {
             }
             steps {
                 script {
-                    echo 'BRANCH_NAME: ${env.BRANCH_NAME}'
+                    echo "BRANCH_NAME: ${env.BRANCH_NAME}"
+                    echo "JOB_NAME: ${env.JOB_NAME}"
                     if ((env.BRANCH_NAME).startsWith('PR-')) {
                         ENABLED_HTMLPROOFER = true
                     }
